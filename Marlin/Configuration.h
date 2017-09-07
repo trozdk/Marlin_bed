@@ -503,7 +503,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
  */
 
 
-// ANDERS - XX
+// ANDERS - XXYY
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,
 //                                       80,
 //                                       1600,
