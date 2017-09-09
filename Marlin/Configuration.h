@@ -509,7 +509,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 //                                       80,
 //                                       1600,
 //                                       97.0874}
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 1520, 97.0874}
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 1600, 97.0874}
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
@@ -605,7 +605,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 //ANDERS
 #define X_PROBE_OFFSET_FROM_EXTRUDER 25  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.1   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.3    // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -745,7 +745,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // Travel limits after homing (units are in mm)
 #define X_MIN_POS 8
 #define Y_MIN_POS 20
-#define Z_MIN_POS -0.5
+#define Z_MIN_POS 0
 #define X_MAX_POS 200
 #define Y_MAX_POS 210
 #define Z_MAX_POS 200
