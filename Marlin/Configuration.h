@@ -744,7 +744,7 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // ANDERS
 // Travel limits after homing (units are in mm)
 #define X_MIN_POS 8
-#define Y_MIN_POS 20
+#define Y_MIN_POS 30
 #define Z_MIN_POS 0
 #define X_MAX_POS 200
 #define Y_MAX_POS 210
@@ -906,12 +906,15 @@ const bool Z_MIN_PROBE_ENDSTOP_INVERTING = true; // set to true to invert the lo
 // - Prevent Z homing when the Z probe is outside bed area.
 #define Z_SAFE_HOMING
 
+
+// ANDERS
 #if ENABLED(Z_SAFE_HOMING)
 //    #define Z_SAFE_HOMING_X_POINT (X_MIN_POS)
 //    #define Z_SAFE_HOMING_Y_POINT (X_MIN_POS)
-  #define Z_SAFE_HOMING_X_POINT (X_MAX_LENGTH/2)
-  #define Z_SAFE_HOMING_Y_POINT (Y_MAX_LENGTH/2)
-
+//  #define Z_SAFE_HOMING_X_POINT (X_MAX_LENGTH/2)
+//  #define Z_SAFE_HOMING_Y_POINT (Y_MAX_LENGTH/2)
+#define Z_SAFE_HOMING_X_POINT ((X_MIN_POS + X_MAX_POS) / 2) // X point for Z homing when homing all axis (G28).
+#define Z_SAFE_HOMING_Y_POINT ((Y_MIN_POS + Y_MAX_POS) / 2) // Y point for Z homing when homing all axis (G28).
 
 #endif
 
